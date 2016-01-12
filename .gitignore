@@ -13,3 +13,4 @@ pom.xml.asc
 /app/boot.properties
 *.edn
 
+/app/.gitignore
