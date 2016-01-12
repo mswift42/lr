@@ -7,9 +7,10 @@
 
 (defn about-component
   [description]
-  [:div
+  [:div#about
    [section-component
-    [:div.aboutheader
-     [:h3 "Profile"]]
-    [:div.aboutdescription
-     description]]])
+    [:div.about
+     [:div.aboutheader
+      [:h3 "Profile"]]
+     [:div.aboutdescription
+      description]]]])
