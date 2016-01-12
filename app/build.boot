@@ -41,7 +41,7 @@
   (comp (production) (build)))
 
 (deftask development []
-  (task-options! cljs {:optimizations :none :source-map true}
+  (task-options! cljs {:optimizations :none :source-map true }
                  reload {:on-jsload 'app.app/init})
   identity)
 
