@@ -5,6 +5,7 @@
    :contact {:name "Martin Haesler"
              :email "martin.haesler@gmail.com"
              :phone "07481 598020"}
-   :projects {:title "ThemeCreator"
-              :url "https://github.com/mswift42/themecreator"
-              :description "ThemeCreator lets you easily create beautiful color themes for IntelliJ Editors, Atom, Textmate and Emacs.\nThemeCreator is a Clojurescript app, built using the reagent framework."}})
+   :projects [{:title "ThemeCreator"
+               :url "https://github.com/mswift42/themecreator"
+               :image "images/tc1chrome.png"
+               :description "ThemeCreator lets you easily create beautiful color themes for IntelliJ Editors, Atom, Textmate and Emacs.\nThemeCreator is a Clojurescript app, built using the reagent framework."}]})
