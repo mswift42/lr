@@ -32,3 +32,13 @@
        [:p phone]]
       [:div.mdl-cell.mdl-cell--4-col
        [:p email]]]]]])
+
+(defn single-project-component
+  [project]
+  [:div.projecttitle
+   [:a {:href (:url project)} (:title project)]]
+  [:div.projectimg
+   [:img {:src (:image project) :alt (:title project)} ]]
+  [:div.projectdesc
+   [:p (:description project)]])
+
