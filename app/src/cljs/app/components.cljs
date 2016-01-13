@@ -35,10 +35,17 @@
 
 (defn single-project-component
   [project]
-  [:div.projecttitle
-   [:a {:href (:url project)} (:title project)]]
-  [:div.projectimg
-   [:img {:src (:image project) :alt (:title project)} ]]
-  [:div.projectdesc
-   [:p (:description project)]])
+  [:div
+   [:div.projecttitle
+    [:a {:href (:url project)} (:title project)]]
+   [:div.projectimg
+    [:img {:src (:image project) :alt (:title project)} ]]
+   [:div.projectdesc
+    [:p (:description project)]]])
+
+(defn projects-component
+  [projects]
+  [:div#projects
+   [section-component
+    (into [:div.project] (map #(single-project-component %) projects))]])
 
