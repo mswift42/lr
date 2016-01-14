@@ -8,4 +8,8 @@
    :projects [{:title "ThemeCreator"
                :url "https://github.com/mswift42/themecreator"
                :image "images/tc1chrome.png"
-               :description "ThemeCreator lets you easily create beautiful color themes for IntelliJ Editors, Atom, Textmate and Emacs.\nThemeCreator is a Clojurescript app, built using the reagent framework."}]})
+               :description "ThemeCreator lets you easily create beautiful color themes for IntelliJ Editors, Atom, Textmate and Emacs.\nThemeCreator is a Clojurescript app, built using the reagent framework."}]
+   :employment [{:company "Pfeiffer & May GmbH + Co KG"
+                 :title "Head of Heating Department"
+                 :time "2008 - 2012"
+                 :description "Supervising of team members. Negotiating prices and special deals with suppliers and customers. Developing weekly promotions for heating products. Determining of prices and conditions for our supplying of goods for bigger projects. Training and teaching of apprentices. Marketing of products utilising renewable energy. Compiling annual reports and goals for the following year."}]})
