@@ -49,3 +49,17 @@
    [section-component
     (into [:div.project] (map #(single-project-component %) projects))]])
 
+(defn single-employment-component
+  [employment]
+  [:div
+   [:div.companyandtitle.mdl-grid
+    [:div.mdl-cell.mdl-cell--4-col.employer
+     [:h3 (:company employment)]]
+    [:div.mdl-cell.mdl-cell--4-col.companyposition
+     [:h3 (:title employment)]]]
+   [:div.yearsanddescription.mdl-grid
+    [:div.mdl-cell-mdl-cell--2-col.years
+     [:h5 (:time employment)]]
+    [:div.mdl-cell-mdl-cell--8-col.employmentdescription
+     [:p (:description employment)]]]])
+
