@@ -63,3 +63,9 @@
     [:div.mdl-cell-mdl-cell--8-col.employmentdescription
      [:p (:description employment)]]]])
 
+(defn emploment-component
+  [employments]
+  [:div#employment
+   [section-component
+    (into [:div.emploment (map #(single-employment-component %) employments)])]])
+
