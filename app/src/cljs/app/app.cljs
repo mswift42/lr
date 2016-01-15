@@ -15,7 +15,7 @@
      [:a.mdl-navigation__link {:href "#contact"} "Contact"]
      [:a.mdl-navigation__link {:href "#about"} "About"]
      [:a.mdl-navigation__link {:href "#projects"} "Projects"]
-     [:a.mdl-navigation__link {:href "#emploment"} "Employment"]]]
+     [:a.mdl-navigation__link {:href "#employment"} "Employment"]]]
    [:main.mdl-layout__content
     [:div.page-content
      content]]])

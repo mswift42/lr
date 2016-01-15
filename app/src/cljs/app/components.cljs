@@ -67,5 +67,5 @@
   [employments]
   [:div#employment
    [section-component
-    (into [:div.emploment (map #(single-employment-component %) employments)])]])
+    (into [:div.emploment] (map #(single-employment-component %) employments))]])
 
