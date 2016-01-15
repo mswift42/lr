@@ -63,7 +63,7 @@
     [:div.mdl-cell-mdl-cell--8-col.employmentdescription
      [:p (:description employment)]]]])
 
-(defn emploment-component
+(defn employment-component
   [employments]
   [:div#employment
    [section-component
