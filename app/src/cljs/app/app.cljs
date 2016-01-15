@@ -14,7 +14,8 @@
     [:nav.mdl-navigation
      [:a.mdl-navigation__link {:href "#contact"} "Contact"]
      [:a.mdl-navigation__link {:href "#about"} "About"]
-     [:a.mdl-navigation__link {:href "#projects"} "Projects"]]]
+     [:a.mdl-navigation__link {:href "#projects"} "Projects"]
+     [:a.mdl-navigation__link {:href "#emploment"} "Employment"]]]
    [:main.mdl-layout__content
     [:div.page-content
      content]]])
@@ -29,7 +30,9 @@
      [comps/about-component
       [:p (:profile resume)]]
      [comps/projects-component
-      (:projects resume)]]]])
+      (:projects resume)]
+     [comps/employment-component
+      (:employment resume)]]]])
 
 
 
