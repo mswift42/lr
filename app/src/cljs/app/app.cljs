@@ -10,12 +10,13 @@
     [:div.mdl-layout__header-row
      [:div.mdl-layout-spacer]]]
    [:div.mdl-layout__drawer
-    [:span.mdl-layout-title "Resume"]
+    [:span.mdl-layout-title "Categories"]
     [:nav.mdl-navigation
-     [:a.mdl-navigation__link {:href "#contact"} "Contact"]
-     [:a.mdl-navigation__link {:href "#about"} "About"]
-     [:a.mdl-navigation__link {:href "#projects"} "Projects"]
-     [:a.mdl-navigation__link {:href "#employment"} "Employment"]]]
+     [comps/sidenav-component [["Contact" "contact_mail"]
+                               ["Profile" "account_circle"]
+                               ["Projects" "group_work"]
+                               ["Employment" "history"]]]
+     ]]
    [:main.mdl-layout__content
     [:div.page-content
      content]]])
