@@ -15,6 +15,23 @@
      [:div.aboutdescription
       description]]]])
 
+(defn navlink-component
+  "navigation link component.
+   Consists of navigation link, link title, and
+   mdl icon."
+  [navlinklst]
+  (let [[name icon] navlinklst]
+    [:li.mdl-list__item
+     [:span.mdl-list__item-primary-content
+      [:i.material-icons.mdl-list__item-icon icon]
+      [:a.mdl-navigation__link {:href (str "#" (.-toLowerCase name))}
+       name]]]))
+
+(defn sidenav-component
+  [linkslist]
+  (into [:ul.catlist.mdl-list]
+        (map #(navlink-component %) linkslist)))
+
 (defn contact-component
   [name email phone]
   [:div#contact
