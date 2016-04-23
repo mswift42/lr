@@ -24,7 +24,7 @@
     [:li.mdl-list__item
      [:span.mdl-list__item-primary-content
       [:i.material-icons.mdl-list__item-icon icon]
-      [:a.mdl-navigation__link {:href (str "#" (.-toLowerCase name))}
+      [:a.mdl-navigation__link {:href (str "#" (.toLowerCase name))}
        name]]]))
 
 (defn sidenav-component
