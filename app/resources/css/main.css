@@ -1,0 +1,11 @@
+@media (min-width:700px) {
+    .mdl-card {
+        min-width:100%;
+        margin-left:2em;
+        margin-right:2em;
+        padding:2em;
+    }
+}
+.ressection {
+    margin-top:3vh;
+}
