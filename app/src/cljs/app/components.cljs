@@ -2,8 +2,9 @@
 
 (defn section-component
   [content]
-  [:div.ressection
-   content])
+  [:div.singlecard
+   [:div.mdl-card.mdl-shadow--2dp.ressection
+    content]])
 
 (defn about-component
   [description]
@@ -85,4 +86,26 @@
   [:div#employment
    [section-component
     (into [:div.emploment] (map #(single-employment-component %) employments))]])
+
+(defn single-education-component
+  [education]
+  [:div.education.mdl-card
+   [:div.education--period--institution.mdl-card__title
+    [:div.mdl-card__title-text
+     [:h4 (:period education)]]
+    [:div.mdl-card__title-text
+     [:h4 (:institution education)]]]
+   [:div.education--degree.mdl-card__supporting-text
+    [:div.degree
+     [:h4 (:degree education)]]]
+   [:div.educaton--details.mdl-card__supporting-text
+    [:div.details
+     [:h4 (:details education)]]]])
+
+(defn education-component
+  [educationlist]
+  [:div#educaton
+   [section-component
+    (into [:div.edu]
+          (map #(single-education-component %) educationlist))]])
 
