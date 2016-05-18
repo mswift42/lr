@@ -5,6 +5,11 @@
         margin-right:2em;
         padding:2em;
     }
+    img {
+        width:600px;
+        max-width:100%;
+        height:auto;
+    }
 }
 .ressection {
     margin-top:3vh;
@@ -12,4 +17,8 @@
 
 li {
     list-style:none;
+}
+
+.page-content {
+    width:95%;
 }
