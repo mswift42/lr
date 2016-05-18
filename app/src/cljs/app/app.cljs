@@ -15,7 +15,9 @@
      [comps/sidenav-component [["Contact" "contact_mail"]
                                ["Profile" "account_circle"]
                                ["Projects" "group_work"]
-                               ["Employment" "history"]]]
+                               ["Employment" "history"]
+                               ["Education" "speaker_notes"]
+                               ["Skills" "check_circle"]]]
      ]]
    [:main.mdl-layout__content
     [:div.page-content
@@ -35,7 +37,9 @@
      [comps/employment-component
       (:employment sample-resume)]
      [comps/education-component
-      (:education sample-resume)]]]])
+      (:education sample-resume)]
+     [comps/skill-component
+      (:skills sample-resume)]]]])
 
 
 
