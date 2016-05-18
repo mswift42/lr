@@ -2,7 +2,7 @@
   (:require [cljsjs.material]
             [reagent.core :as reagent]
             [app.components :as comps]
-            [app.res :refer [resume]]))
+            [app.res :refer [sample-resume]]))
 
 (defn fixed-header-and-drawer-component [content]
   [:div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
@@ -25,15 +25,17 @@
   [:div
    [fixed-header-and-drawer-component
     [:div
-     [comps/contact-component (:name (:contact resume))
-      (:email (:contact resume))
-      (:phone (:contact resume))]
+     [comps/contact-component (:name (:contact sample-resume))
+      (:email (:contact sample-resume))
+      (:phone (:contact sample-resume))]
      [comps/about-component
-      [:p (:profile resume)]]
+      [:p (:profile sample-resume)]]
      [comps/projects-component
-      (:projects resume)]
+      (:projects sample-resume)]
      [comps/employment-component
-      (:employment resume)]]]])
+      (:employment sample-resume)]
+     [comps/education-component
+      (:education sample-resume)]]]])
 
 
 
