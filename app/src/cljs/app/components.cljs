@@ -23,9 +23,10 @@
   [navlinklst]
   (let [[name icon] navlinklst]
     [:li.mdl-list__item
-     [:span.mdl-list__item-primary-content
-      [:i.material-icons.mdl-list__item-icon icon]
-      [:a.mdl-navigation__link {:href (str "#" (.toLowerCase name))}
+     [:span.mdl-list__item-primary-content.mdl-grid
+      [:i.material-icons.mdl-list__item-icon.mdl-cell.mdl-cell--2-col icon]
+      [:a.mdl-navigation__link.mdl-cell.mdl-cell--2-col
+       {:href (str "#" (.toLowerCase name))}
        name]]]))
 
 (defn sidenav-component
@@ -129,4 +130,53 @@
    [section-component
     (into [:div.skills]
           (map #(single-skill-component %) skills))]])
+
+(defn single-language-component
+  [language]
+  [:div.mdl-card
+   [:div.mdl-card__title
+    [:span (:lang language)]]
+   [:div.mdl-card__supporting-text
+    [:span (:level language)]]])
+
+(defn language-component
+  [languages]
+  [:div#languages
+   [section-component
+    (into [:div.lang]
+          (map #(single-language-component %) languages))]])
+
+(defn single-award-component
+  [award]
+  [:div.mdl-card                                   ;
+   [:div.mdl-card__title.awardtitle
+    [:h2 (:title award)]]
+   [:div.mdl-card__supporting-text.awardawarded
+    [:h3 (:awarded award)]]
+   [:div.mdl-card__supporting-text.awarddetails
+    [:p (:details award)]]])
+
+(defn award-component
+  [awards]
+  [:div#awards
+   [section-component
+    (into [:div.award]
+          (map #(single-award-component %) awards))]])
+
+(defn single-social-profile-component
+  [social-profile]
+  [:div.mdl-card
+   [:div.mdl-card__title.socialprofileprovider
+    [:h2 (:provider social-profile)]]
+   [:div.mdl-card__supporting-text.socialprofilehandle
+    [:h3 [:a {:href (:handle social-profile)} (:handle social-profile)]]]])
+
+
+(defn social-profile-component
+  [social-profile-list]
+  [:div#social
+   [section-component
+    (into [:div.socialprofile]
+          (map #(single-social-profile-component %) social-profile-list))]])
+
 

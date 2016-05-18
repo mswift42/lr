@@ -16,8 +16,11 @@
                                ["Profile" "account_circle"]
                                ["Projects" "group_work"]
                                ["Employment" "history"]
-                               ["Education" "speaker_notes"]
-                               ["Skills" "check_circle"]]]
+                               ["Education" "school"]
+                               ["Skills" "check_circle"]
+                               ["Languages" "language"]
+                               ["Awards" "stars"]
+                               ["Social Profiles" "share"]]]
      ]]
    [:main.mdl-layout__content
     [:div.page-content
@@ -39,7 +42,13 @@
      [comps/education-component
       (:education sample-resume)]
      [comps/skill-component
-      (:skills sample-resume)]]]])
+      (:skills sample-resume)]
+     [comps/language-component
+      (:languages sample-resume)]
+     [comps/award-component
+      (:awards sample-resume)]
+     [comps/social-profile-component
+      (:social-profiles sample-resume)]]]])
 
 
 
