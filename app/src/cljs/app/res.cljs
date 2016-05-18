@@ -15,7 +15,8 @@
                  :description "Supervising of team members. Negotiating prices and special deals with suppliers and customers. Developing weekly promotions for heating products. Determining of prices and conditions for our supplying of goods for bigger projects. Training and teaching of apprentices. Marketing of products utilising renewable energy. Compiling annual reports and goals for the following year."}]})
 
 (def sample-resume
-  {:profile "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation! "
+  {:name "Richard Hendriks"
+   :profile "Richard hails from Tulsa. He has earned degrees from the University of Oklahoma and Stanford. (Go Sooners and Cardinals!) Before starting Pied Piper, he worked for Hooli as a part time software developer. While his work focuses on applied information theory, mostly optimizing lossless compression schema of both the length-limited and adaptive variants, his non-work interests range widely, everything from quantum computing to chaos theory. He could tell you about it, but THAT would NOT be a “length-limited” conversation! "
    :contact {:name "Richard Hendriks"
              :email "richard.hendriks@mail.com"
              :phone "(912) 555-4321"}
