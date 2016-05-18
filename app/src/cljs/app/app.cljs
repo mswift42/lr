@@ -8,9 +8,10 @@
   [:div.mdl-layout.mdl-js-layout.mdl-layout--fixed-drawer.mdl-layout--fixed-header
    [:header.mdl-layout__header
     [:div.mdl-layout__header-row
+     [:span "Resume"]
      [:div.mdl-layout-spacer]]]
    [:div.mdl-layout__drawer
-    [:span.mdl-layout-title "Categories"]
+    [:span.mdl-layout-title (:name sample-resume)]
     [:nav.mdl-navigation
      [comps/sidenav-component [["Contact" "contact_mail"]
                                ["Profile" "account_circle"]
