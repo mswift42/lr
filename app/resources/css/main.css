@@ -9,3 +9,7 @@
 .ressection {
     margin-top:3vh;
 }
+
+li {
+    list-style:none;
+}
