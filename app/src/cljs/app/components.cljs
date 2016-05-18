@@ -104,8 +104,29 @@
 
 (defn education-component
   [educationlist]
-  [:div#educaton
+  [:div#education
    [section-component
     (into [:div.edu]
           (map #(single-education-component %) educationlist))]])
+
+(defn skilldetail-component
+  [skilldetail]
+  [:span skilldetail])
+
+(defn single-skill-component
+  [skill]
+  [:div.mdl-card
+   [:div.skillcategory.mdl-card__title
+    [:h2 (:category skill)]]
+   [:div.skilllevel.mdl-card__title
+    [:h3 (:level skill)]]
+   (into [:div.skilldetail]
+         (map #(skilldetail-component %) (:details skill)))])
+
+(defn skill-component
+  [skills]
+  [:div#skills
+   [section-component
+    (into [:div.skills]
+          (map #(single-skill-component %) skills))]])
 

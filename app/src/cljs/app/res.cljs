@@ -31,11 +31,11 @@
                  :title "CEO/President"
                  :time "December 2013 - December 2014"
                  :description "Pied Piper is a multi-platform technology based on a proprietary universal compression algorithm that has consistently fielded high Weisman Scores™ that are not merely competitive, but approach the theoretical limit of lossless compression.\n Build an algorithm for artist to detect if their music was violating copy right infringement laws\n Successfully won Techcrunch Disrupt\n Optimized an algorithm that holds the current world record for Weisman Scores"}]
-   :education [{:period "2011 - 2014"
+   :education [{:period "2011 - 2014 "
                 :institution "University of Oklahoma"
                 :degree "Backelor, Information Technology"
                 :details "Bla Blah"}
-               {:period "2009 - 2011"
+               {:period "2009 - 2011 "
                 :institution "Finishing school"
                 :degree "Master of Excellence"
                 :details "Richard amazed with culinary artistry"}]
