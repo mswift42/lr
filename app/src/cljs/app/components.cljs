@@ -4,10 +4,11 @@
   [content header]
   [:div.singlecard
    [:div.mdl-card.mdl-shadow--2dp.ressection
-    [:div.sectionheader
-     [:h3 header]]
-    [:div.sectioncontent
-     content]]])
+    [:div.mdl-grid
+     [:div.sectionheader.mdl-cell--1-offset-desktop.mdl-cell--3-col-desktop.mdl-cell--12-col-phone
+      [:h3 header]]
+     [:div.sectioncontent.mdl-cell--9-col.mdl-cell--middle
+      content]]]])
 
 
 

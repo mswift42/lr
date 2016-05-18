@@ -10,6 +10,10 @@
         max-width:100%;
         height:auto;
     }
+    
+    .page-content {
+        width:95%;
+    }
 }
 .ressection {
     margin-top:3vh;
@@ -19,6 +23,9 @@ li {
     list-style:none;
 }
 
-.page-content {
-    width:95%;
+
+.contact {
+    width:90%;
 }
+
+
