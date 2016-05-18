@@ -24,8 +24,8 @@
   (let [[name icon] navlinklst]
     [:li.mdl-list__item
      [:span.mdl-list__item-primary-content.mdl-grid
-      [:i.material-icons.mdl-list__item-icon.mdl-cell.mdl-cell--2-col icon]
-      [:a.mdl-navigation__link.mdl-cell.mdl-cell--2-col
+      [:i.material-icons.mdl-list__item-icon.mdl-cell.mdl-cell--2-col.mdl-cell--middle icon]
+      [:a.mdl-navigation__link.mdl-cell.mdl-cell--2-col.mdl-cell--middle
        {:href (str "#" (.toLowerCase name))}
        name]]]))
 
