@@ -1,14 +1,10 @@
 (ns app.components)
 
 (defn section-component
-  [content header]
+  [content]
   [:div.singlecard
    [:div.mdl-card.mdl-shadow--2dp.ressection
-    [:div.mdl-grid
-     [:div.sectionheader.mdl-cell--1-offset-desktop.mdl-cell--3-col-desktop.mdl-cell--12-col-phone
-      [:h3 header]]
-     [:div.sectioncontent.mdl-cell--9-col.mdl-cell--middle
-      content]]]])
+    content]])
 
 
 
@@ -16,10 +12,12 @@
   [description]
   [:div#about
    [section-component
-    [:div.about
-     [:div.aboutdescription
-      description]]
-    "About"]])
+    [:div.mdl-grid
+     [:div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--12-col-phone.mdl-card__title
+      [:h3 "About"]]
+     [:div.mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone
+      description]]]])
+
 
 (defn navlink-component
   "navigation link component.
@@ -56,7 +54,7 @@
        [:p phone]]
       [:div.mdl-cell.mdl-cell--4-col
        [:p email]]]]
-    "Contact"]])
+    ]])
 
 (defn single-project-component
   [project]
