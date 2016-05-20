@@ -6,19 +6,6 @@
    [:div.mdl-card.mdl-shadow--2dp.ressection
     content]])
 
-
-
-(defn about-component
-  [description]
-  [:div#about
-   [section-component
-    [:div.mdl-grid
-     [:div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--12-col-phone.mdl-card__title
-      [:h3 "About"]]
-     [:div.mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone
-      description]]]])
-
-
 (defn navlink-component
   "navigation link component.
    Consists of navigation link, link title, and
@@ -37,24 +24,35 @@
   (into [:ul.catlist.mdl-list]
         (map #(navlink-component %) linkslist)))
 
+(defn about-component
+  [description]
+  [:div#profile
+   [section-component
+    [:div.mdl-grid
+     [:div.mdl-cell.mdl-cell--3-col-desktop.mdl-cell--12-col-phone.mdl-card__title
+      [:h3 "About"]]
+     [:div.mdl-cell.mdl-cell--8-col.mdl-cell--12-col-phone
+      description]]]])
+
 (defn contact-component
   [name email phone]
   [:div#contact
    [section-component
-    [:div.contact
-     [:div.contactname
-      [:h4 name]]
-     [:div.contactphonemail.mdl-grid
-      [:div.mdl-cell.mdl-cell--4-col
-       [:i.material-icons "phone"]]
-      [:div.mdl-cell.mdl-cell--4-col
-       [:i.material-icons "email"]]]
-     [:div.contact.mdl-grid
-      [:div.mdl-cell.mdl-cell--4-col
-       [:p phone]]
-      [:div.mdl-cell.mdl-cell--4-col
-       [:p email]]]]
-    ]])
+    [:div.mdl-grid
+     [:div.contactheader.mdl-cell.mdl-cell.mdl-cell--4-col.mdl-cell--12-col-phone.mdl-cell--middle
+      [:h3 "Contact"]]
+     [:div.contactdetails.mdl-cell.mdl-cell--2-offset-desktop.mdl-cell--6-col.mdl-cell--12-col-phone.mdl-cell--bottom
+      [:div.mdl-grid
+       [:div.contactname.mdl-cell.mdl-cell--12-col
+        [:h3 name]]
+       [:div.contactemailicon.mdl-cell.mdl-cell--2-col
+        [:i.material-icons "mail"]]
+       [:div.contactemailaddress.mdl-cell.mdl-cell--10-col
+        [:p email]]
+       [:div.contactphoneicon.mdl-cell.mdl-cell--2-col
+        [:i.material-icons "phone"]]
+       [:div.contactphonenumber.mdl-cell.mdl-cell--10-col
+        [:p phone]]]]]]])
 
 (defn single-project-component
   [project]
