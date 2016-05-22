@@ -68,10 +68,9 @@
   [projects]
   [:div#projects
    [section-component
-    [:div.projectsheader.mdl-grid
-     [:div.mdl-cell.mdl-cell--12-col
-      [:h3 "Projects"]]
-     (into [:div.project] (map #(single-project-component %) projects))]]])
+    [:div.projectsheader.mdl-grid--no-spacing
+     [:h3.mdl-cell.mdl-cell--12-col "projects"]
+     (into [:div.project.mdl-cell.mdl-cell--4-col] (map #(single-project-component %) projects))]]])
 
 (defn single-employment-component
   [employment]
