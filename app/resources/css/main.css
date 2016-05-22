@@ -39,6 +39,16 @@ li {
     list-style:none;
 }
 
+.projectcomponent {
+    margin:1em;
+}
+.project {
+    margin:1em;
+}
+.projectsheader > h3 {
+    text-align:center;
+}
+
 
 
 
