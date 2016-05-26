@@ -56,7 +56,7 @@
 
 (defn single-project-component
   [project]
-  [:div.projectcomponent.mdl-card.mdl-shadow--2dp
+  [:div.mdl-cell.mdl-cell--4-col.singleproject.mdl-shadow--2dp
    [:div.projecttitle
     [:a {:href (:url project)} (:title project)]]
    [:div.projectimg
@@ -68,9 +68,11 @@
   [projects]
   [:div#projects
    [section-component
-    [:div.projectsheader.mdl-grid--no-spacing
-     [:h3.mdl-cell.mdl-cell--12-col "projects"]
-     (into [:div.project.mdl-cell.mdl-cell--4-col] (map #(single-project-component %) projects))]]])
+    [:div.mdl-grid--no-spacing
+     [:h3.projectsheader.mdl-cell.mdl-cell--12-col "projects"]
+     [:div
+      (into [:div.project.mdl-grid]
+            (map #(single-project-component %) projects))]]]])
 
 (defn single-employment-component
   [employment]
