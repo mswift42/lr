@@ -21,8 +21,7 @@
                                ["Skills" "check_circle"]
                                ["Languages" "language"]
                                ["Awards" "stars"]
-                               ["Social Profiles" "share"]]]
-     ]]
+                               ["Social Profiles" "share"]]]]]
    [:main.mdl-layout__content
     [:div.page-content
      content]]])
