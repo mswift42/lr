@@ -57,6 +57,10 @@ li {
     margin:2em;
     flex-grow:1;
 }
+.employmentheader {
+    text-align:center;
+    margin-bottom:1em;
+}
 
 
 

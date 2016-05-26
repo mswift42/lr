@@ -92,20 +92,22 @@
   [employments]
   [:div#employment
    [section-component
-    (into [:div.emploment] (map #(single-employment-component %) employments))]])
+    [:div.mdl-grid--no-spacing
+     [:h3.employmentheader "Employment"]
+     (into [:div.emploment] (map #(single-employment-component %) employments))]]])
 
 (defn single-education-component
   [education]
   [:div.education.mdl-card
-   [:div.education--period--institution.mdl-card__title
+   [:div.education--period--institution.
     [:div.mdl-card__title-text
      [:h4 (:period education)]]
     [:div.mdl-card__title-text
      [:h4 (:institution education)]]]
-   [:div.education--degree.mdl-card__supporting-text
+   [:div.education--degree
     [:div.degree
      [:h4 (:degree education)]]]
-   [:div.educaton--details.mdl-card__supporting-text
+   [:div.educaton--details
     [:div.details
      [:h4 (:details education)]]]])
 
@@ -113,8 +115,10 @@
   [educationlist]
   [:div#education
    [section-component
-    (into [:div.edu]
-          (map #(single-education-component %) educationlist))]])
+    [:div.mdl-grid--no-spacing
+     [:h3.employmentheader "Employment"]
+     (into [:div.edu]
+           (map #(single-education-component %) educationlist))]]])
 
 (defn skilldetail-component
   [skilldetail]
