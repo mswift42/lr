@@ -118,7 +118,7 @@
   [:div#education
    [section-component
     [:div.mdl-grid--no-spacing
-     [:h3.employmentheader "Employment"]
+     [:h3.employmentheader "Education"]
      (into [:div.edu]
            (map #(single-education-component %) educationlist))]]])
 
