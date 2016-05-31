@@ -126,20 +126,22 @@
 
 (defn single-skill-component
   [skill]
-  [:div.mdl-card
-   [:div.skillcategory.mdl-card__title
-    [:h2 (:category skill)]]
-   [:div.skilllevel.mdl-card__title
+  [:div.mdl-grid
+   [:div.skillcategory.mdl-cell.mdl-cell--12-col
+    [:h3 (:category skill)]]
+   [:div.skilllevel.mdl-cell.mdl-cell--12-col
     [:h3 (:level skill)]]
-   (into [:div.skilldetail]
+   (into [:div.skilldetail.mdl-cell.mdl-cell--3-col]
          (map #(skilldetail-component %) (:details skill)))])
 
 (defn skill-component
   [skills]
   [:div#skills
    [section-component
-    (into [:div.skill]
-          (map #(single-skill-component %) skills))]])
+    [:div.mdl-grid--no-spacing
+     [:h3.employmentheader "Skills"]
+     (into [:div.skill.mdl-cell.mdl-cell--12-col]
+           (map #(single-skill-component %) skills))]]])
 
 (defn single-language-component
   [language]
