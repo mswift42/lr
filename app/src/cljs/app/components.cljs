@@ -100,18 +100,16 @@
   [education]
   [:div.education
    [:div.education--period--institution.mdl-grid
-    [:div.mdl-cell-mdl-cell--4-col.eduperiod
+    [:div.mdl-cell.mdl-cell--4-col.eduperiod
      [:h4 (:period education)]]
-    [:div.mdl-cell-mdl-cell--4-col-offset
-     [:span ""]]
-    [:div.mdl-cell-mdl-cell--8-col.eduinstitution
+    [:div.mdl-cell.mdl-cell--8-col.eduinstitution
      [:h4 (:institution education)]]]
-   [:div.education--degree
+   [:div.education--degree.mdl-cell.mdl-cell--8-col.mdl-cell--top
     [:div.degree
-     [:h4 (:degree education)]]]
+     [:h5 (:degree education)]]]
    [:div.educaton--details
-    [:div.details
-     [:h4 (:details education)]]]])
+    [:div.details.mdl-cell.mdl-cell--12-col.mdl-cell--middle
+     [:h6 (:details education)]]]])
 
 (defn education-component
   [educationlist]
@@ -124,7 +122,7 @@
 
 (defn skilldetail-component
   [skilldetail]
-  [:span skilldetail])
+  [:span.skilldetail skilldetail])
 
 (defn single-skill-component
   [skill]
@@ -140,7 +138,7 @@
   [skills]
   [:div#skills
    [section-component
-    (into [:div.skills]
+    (into [:div.skill]
           (map #(single-skill-component %) skills))]])
 
 (defn single-language-component
