@@ -69,7 +69,7 @@
   [:div#projects
    [section-component
     [:div.mdl-grid--no-spacing
-     [:h3.projectsheader.mdl-cell.mdl-cell--12-col "projects"]
+     [:h3.projectsheader.mdl-cell.mdl-cell--12-col "Projects"]
      [:div
       (into [:div.project.mdl-grid]
             (map #(single-project-component %) projects))]]]])
@@ -98,11 +98,13 @@
 
 (defn single-education-component
   [education]
-  [:div.education.mdl-card
-   [:div.education--period--institution.
-    [:div.mdl-card__title-text
+  [:div.education
+   [:div.education--period--institution.mdl-grid
+    [:div.mdl-cell-mdl-cell--4-col.eduperiod
      [:h4 (:period education)]]
-    [:div.mdl-card__title-text
+    [:div.mdl-cell-mdl-cell--4-col-offset
+     [:span ""]]
+    [:div.mdl-cell-mdl-cell--8-col.eduinstitution
      [:h4 (:institution education)]]]
    [:div.education--degree
     [:div.degree
